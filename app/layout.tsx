@@ -1,15 +1,6 @@
-// app/layout.tsx
-import React from 'react'
-import './globals.css'
-import { Inter } from 'next/font/google'
-import { Providers } from './providers'
-
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata = {
   title: 'JetFormBuilder Documentation',
-  description: 'Complete guide to building powerful forms with JetFormBuilder',
-  keywords: 'JetFormBuilder, forms, WordPress, documentation, tutorial',
+  description: 'Complete guide to building forms with JetFormBuilder',
 }
 
 export default function RootLayout({
@@ -18,11 +9,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="bg-white text-gray-900">
-        <Providers>
-          {children}
-        </Providers>
+    <html lang="en">
+      <body style={{ margin: 0, padding: 0, fontFamily: 'Arial, sans-serif' }}>
+        {children}
       </body>
     </html>
   )
